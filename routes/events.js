@@ -55,18 +55,18 @@ router.get('/', function (req, res, next) {
                 id: 2,
                 eventSchedule: {
                     eventStartTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
+                        weekday: 'sun',
+                        day: '5',
+                        month: '6',
                         year: '2020',
-                        time: '18:30'
+                        time: '14:30'
                     },
                     eventEndTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
+                        weekday: 'sun',
+                        day: '5',
+                        month: '6',
                         year: '2020',
-                        time: '18:30'
+                        time: '23:30'
                     }
                 },
                 participants: [

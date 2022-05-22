@@ -1,19 +1,16 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var eventsRouter = require('./routes/events');
+const eventsRouter = require('./routes/events');
+const authRouter = require('./routes/auth.routes');
+const userRouter = require('./routes/user.routes');
+const app = express();
 
-var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,10 +18,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/events', eventsRouter)
+app.use('/events', eventsRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/auth', userRouter)
+
+function initial() {
+  Role.create({
+      id: 1,
+      name: "user"
+  });
+}
+
+const db = require("./models");
+const Role = db.role;
+db.sequelize.sync({force: true}).then(() => {
+console.log('Drop and Resync Db');
+initial();
+});
+
+app.get("/", (req, res) => {
+  res.json({ message: "Eventmanagerdemo - backend server" });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
