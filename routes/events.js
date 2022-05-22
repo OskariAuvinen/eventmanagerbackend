@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', function (req, res, next) {
 
-//eventVersion v 1.19
+    //eventVersion v 1.10
     res.send({
         events: [
             {
@@ -12,18 +12,12 @@ router.get('/', function (req, res, next) {
                 id: 1,
                 eventSchedule: {
                     eventStartTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     },
                     eventEndTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     }
                 },
                 participants: [
@@ -55,18 +49,12 @@ router.get('/', function (req, res, next) {
                 id: 2,
                 eventSchedule: {
                     eventStartTime: {
-                        weekday: 'sun',
-                        day: '5',
-                        month: '6',
-                        year: '2020',
-                        time: '14:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     },
                     eventEndTime: {
-                        weekday: 'sun',
-                        day: '5',
-                        month: '6',
-                        year: '2020',
-                        time: '23:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     }
                 },
                 participants: [
@@ -98,18 +86,12 @@ router.get('/', function (req, res, next) {
                 id: 3,
                 eventSchedule: {
                     eventStartTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     },
                     eventEndTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     }
                 },
                 participants: [
@@ -141,18 +123,12 @@ router.get('/', function (req, res, next) {
                 id: 4,
                 eventSchedule: {
                     eventStartTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-12",
+                        time: "20:40"
                     },
                     eventEndTime: {
-                        weekday: 'sat',
-                        day: '28',
-                        month: '5',
-                        year: '2020',
-                        time: '18:30'
+                        date: "2022-05-24",
+                        time: "20:42"
                     }
                 },
                 participants: [
