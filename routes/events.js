@@ -6,12 +6,12 @@ let events = [
         id: 1,
         eventSchedule: {
             eventStartTime: {
-                date: "2022-05-24",
-                time: "20:42"
+                date: "2022-01-26",
+                time: "13:42"
             },
             eventEndTime: {
-                date: "2022-05-24",
-                time: "20:42"
+                date: "2022-01-26",
+                time: "14:42"
             }
         },
         participants: [
@@ -28,7 +28,7 @@ let events = [
                 status: 'no'
             }],
         eventInfo: {
-            city: 'Helsinki',
+            city: 'Vantaa',
             address: 'Harjutori 8',
             contactInfo: {
                 www: 'www.google.com',
@@ -44,11 +44,11 @@ let events = [
         eventSchedule: {
             eventStartTime: {
                 date: "2022-05-24",
-                time: "20:42"
+                time: "20:40"
             },
             eventEndTime: {
                 date: "2022-05-24",
-                time: "20:42"
+                time: "20:41s"
             }
         },
         participants: [
@@ -80,11 +80,11 @@ let events = [
         id: 3,
         eventSchedule: {
             eventStartTime: {
-                date: "2022-05-24",
+                date: "2022-05-01",
                 time: "20:42"
             },
             eventEndTime: {
-                date: "2022-05-24",
+                date: "2022-05-19",
                 time: "20:42"
             }
         },
@@ -102,7 +102,7 @@ let events = [
                 status: 'no'
             }],
         eventInfo: {
-            city: 'Helsinki',
+            city: 'Akaa',
             address: 'Harjutori 8',
             contactInfo: {
                 www: 'www.google.com',
@@ -139,7 +139,7 @@ let events = [
                 status: 'no'
             }],
         eventInfo: {
-            city: 'Helsinki',
+            city: 'Espoo',
             address: 'Harjutori 8',
             contactInfo: {
                 www: '',
