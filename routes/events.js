@@ -153,7 +153,9 @@ let events = [
 ]
 router.post('/', (req, res) => {
     events.push(req.body);
-    console.log(req.body);
+    let event = req.body;
+    //create some id for now
+    event.id = events.length + 1;
     res.send('Got a POST request' + JSON.stringify(events));
   })
 
